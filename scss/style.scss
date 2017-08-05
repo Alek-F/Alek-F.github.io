@@ -1,0 +1,23 @@
+body
+{
+	background: red;
+}
+
+@import 'box';
+
+@mixin marg10($mt,$mb,$mr,$ml)
+{
+	margin-top: $mt;
+	margin-bottom: $mb;
+	margin-right: $mr;
+	margin-left: $ml;
+}
+
+.box
+{
+	/*@include marg10();*/
+	width: calc(50% - 100px);
+	height: 100px;
+	background: green;
+	@include marg10(20px,40px,15px,60px);
+}
